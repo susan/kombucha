@@ -1,0 +1,23 @@
+// Place all the styles related to the Store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  font-family: "Sans Serif";
+  color: blue;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+.kombucha {
+  border: solid 1px orange;
+  padding: 5px;
+
+  img {
+    border: solid 1px #ccc;
+    max-width: 575px;
+  }
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <!-- <h1>🍷KombuchaKat🍷</h1>
+   <div class="product">
+   <h2>Case of Kombucha for $25</h2>
+   <div class="kombucha">
+   	<%= image_tag("ca.jpeg", alt: "all the kombucha") %>
+    </div>  -->
+
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+           <div id="error_explanation">
+             <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+       <label class="amount">
+          <span>Amount: $25.00</span>
+       </label>
+     </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A case of Kombucha"
+          data-amount="2500"
+          data-locale="auto"></script>
+   <% end %>
+ </div>
+</div>
